@@ -17,7 +17,7 @@ func main() {
 	log.Printf("Listening on %s", addr)
 	if err := http.ListenAndServe(addr, http.HandlerFunc(func(w http.ResponseWriter, req *http.Request) {
 		w.Header().Set("Content-Type", "text/plain")
-		fmt.Fprintf(w, "Hello")
+		fmt.Fprintf(w, "Hello there")
 	})); err != nil {
 		log.Fatalf("Unable to listen: %v", err)
 	}
